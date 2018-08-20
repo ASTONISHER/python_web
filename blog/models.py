@@ -24,9 +24,5 @@ def __str__(self):
 
 
 
-
-
-
-
 #### cmd에서 python manage.py migrations blog를 통해 장고 모델에 변화가 생겼다는 걸 알림
 #### cmd에서 python manage.py migrate blog를 통해 실제 DB에 모델 추가를 반영함
