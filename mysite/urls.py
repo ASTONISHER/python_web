@@ -15,9 +15,17 @@ Including another URLconf
     1. Import the include() function: from django.conf.urls import url, include
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
-from django.conf.urls import url
+from django.conf.urls import include, url
 from django.contrib import admin
 
+# admin/으로 시작하는 모든 URL을 view와 대조해서 찾아냄 -> 비효율적 -> 정규표현식 사용
+"""
+^  문자열이 시작할 때
+$ 문자열이 끝날 때
+\d 숫자
+() 패턴 부분 저장
+"""
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+    url(r'', include('blog.urls')),
 ]
